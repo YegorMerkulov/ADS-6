@@ -13,8 +13,8 @@ class TPQueue {
     TPQueue() : f(0), l(0), count(0) {
     arr = new T[size];
     }
-    TPQueue(){
-      del[] arr;
+    ~TPQueue(){
+      delete[] arr;
     }
     int isEmpty() const {
       return count == 0;
