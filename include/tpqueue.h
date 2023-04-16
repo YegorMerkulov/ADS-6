@@ -13,7 +13,7 @@ class TPQueue {
     TPQueue() : f(0), l(0), count(0) {
     arr = new T[size];
     }
-    ~TPQueue(){
+    ~TPQueue() {
       delete[] arr;
     }
     int isEmpty() const {
@@ -25,7 +25,7 @@ class TPQueue {
     void push(const T& value) {
       if (isFull()) {
         throw std::string("Full");
-      } else{
+      } else {
           int temp = l;
           for (int i = l; i > f; i--) {
             if (arr[i - 1].prior < value.prior) {
@@ -38,7 +38,7 @@ class TPQueue {
           l++;
       }
     }
-    const T& pop(){
+    const T& pop() {
       if (isEmpty()) {
         throw std::string("Empty");
       } else {
